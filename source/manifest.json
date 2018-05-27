@@ -1,0 +1,61 @@
+{
+  "manifest_version": 2,
+  "name": "Navigation",
+  "author": "pdulvp@gmail.com",
+  "version": "1.1",
+  "homepage_url": "https://bitbucket.org/pdulvp/webext-navigation",
+  "description": "It makes navigation accessible",
+
+  "applications": {
+	  "gecko": {
+		"id": "navigation@pdulvp",
+		"strict_min_version": "60.0"
+	  }
+	},
+
+  "icons": {
+    "48": "icons/navigation.svg",
+    "32": "icons/navigation.svg"
+  },
+
+  "permissions": [
+    "activeTab",
+	"tabs"
+  ],
+  
+  "background": {
+    "scripts": ["background.js"]
+  }, 
+  
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "icons/navigation.svg",
+    "default_title": "Navigation",
+    "default_popup": "ui/popup.html", 
+    
+    "theme_icons": [{ 
+        //mozilla-issue #1377302. It's weird, icons are inverted.
+        "light": "icons/navigation-dark.svg",
+        "dark": "icons/navigation.svg",
+        "size": 32
+      }, {
+        "light": "icons/navigation-dark.svg",
+        "dark": "icons/navigation.svg",
+        "size": 16
+      }]
+  },
+  
+  "sidebar_action": {
+	  "default_title": "Navigation",
+	  "default_panel": "ui/sidebar.html",
+	  "default_icon": "icons/navigation.svg"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content_scripts/navigation.js"]
+    }
+  ]
+
+}

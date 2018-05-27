@@ -1,0 +1,132 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. 
+ *
+ * @author: pdulvp@gmail.com
+ */
+ 
+html, body {
+  width: auto;
+}
+.popup {
+  width: 300px;
+}
+
+.link {
+  margin: 1px #EEEEEE;
+  padding: 4px;
+  text-align: left;
+  font-family: tahoma;
+  font-size: 11px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  
+}
+
+.link:hover {
+  background-color: #CFF2F2;
+}
+.list-item{
+ display: list-item;
+}
+
+.link-quit{
+	background-image: url(chrome://browser/skin/quit.svg);
+}
+.link-settings{
+	background-image: url(chrome://browser/skin/settings.svg);
+}
+.link-toc{
+	background-image: url(chrome://browser/skin/library.svg);
+}
+.link-search{
+	background-image: url(chrome://browser/skin/search-glass.svg);
+}
+.link-navigation{
+	background-image: url(../icons/navigation.svg);
+}
+.link-help{
+	background-image: url(chrome://browser/skin/icons/help.svg);
+}
+.link-library{
+	background-image: url(chrome://browser/skin/library.svg);
+}
+.link-previous{
+	background-image: url(../icons/previous-16b.png);
+}
+.link-next{
+	background-image: url(../icons/next-16b.png);
+}
+
+
+.link-expand{
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBkPSJNOCwxMkwzLDcsNCw2bDQsNCw0LTQsMSwxWiIgZmlsbD0iIzZBNkE2QSIgLz4KPC9zdmc+Cg==);
+}
+
+.link-expanded{
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBkPSJNOCwxMkwzLDcsNCw2bDQsNCw0LTQsMSwxWiIgZmlsbD0iIzZBNkE2QSIgLz4KPC9zdmc+Cg==);
+   background-color: rgba(0, 0, 0, 0.06);
+}
+
+.my-list-item {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 24px;
+  padding: 0 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width:auto;
+  overflow:hidden;
+}
+
+.my-list-item:not(.disabled):hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.my-list-item:not(.disabled):hover:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.my-list-item.disabled {
+  color: #999;
+}
+
+.my-list-item > .icon {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  margin-right: 8px;
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+}
+
+.my-list-item > .right-icon {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  margin-left: 8px;
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+}
+
+.my-list-item > .text {
+  flex-grow: 12;
+}
+
+.my-list-item > .right-text {
+  flex-grow: 2;
+}
+
+.my-list-item > .text-shortcut {
+  color: #808080;
+  font-family: "Lucida Grande", caption;
+  font-size: .847em;
+  justify-content: flex-end;
+}
